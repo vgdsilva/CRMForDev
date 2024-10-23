@@ -1,10 +1,11 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    @* <div class="sidebar">
-        <NavMenu />
-    </div> *@
 
-    <header>
+@inject Core.Services.SessionService _sessionService
+@inject NavigationManager Navigation
+
+
+<div class="page">
+   <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CRM Dev Freela</a>
@@ -42,3 +43,30 @@
         </article>
     </main>
 </div>
+
+@code {
+    private Timer _sessionTimer;
+    private int _sessionTimeout = 30 * 60 * 1000; // 30 minutos
+
+    protected override async Task OnInitializedAsync()
+    {
+        _sessionTimer = new Timer(async state => await CheckSession(), null, 0, _sessionTimeout);
+    }
+
+    private async Task CheckSession()
+    {
+        var token = await _sessionService.GetSessionTokenAsync();
+        if (string.IsNullOrEmpty(token))
+        {
+            _sessionTimer?.Dispose();
+
+            
+            Navigation.NavigateTo("/login");
+        }
+    }
+
+    public void Dispose()
+    {
+        _sessionTimer?.Dispose();
+    }
+}
