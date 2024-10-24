@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMDevFreelancer.WebApp", "CRMDevFreelancer.WebApp\CRMDevFreelancer.WebApp.csproj", "{6CE5833F-9320-4406-A4CF-1D7B97B6FBFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMDevFreelancer.Domain", "CRMDevFreelancer.Domain\CRMDevFreelancer.Domain.csproj", "{807C3C24-0D6B-4AAE-A0AB-348EBAE857FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CE5833F-9320-4406-A4CF-1D7B97B6FBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE5833F-9320-4406-A4CF-1D7B97B6FBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE5833F-9320-4406-A4CF-1D7B97B6FBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE5833F-9320-4406-A4CF-1D7B97B6FBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807C3C24-0D6B-4AAE-A0AB-348EBAE857FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807C3C24-0D6B-4AAE-A0AB-348EBAE857FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807C3C24-0D6B-4AAE-A0AB-348EBAE857FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807C3C24-0D6B-4AAE-A0AB-348EBAE857FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA10CA16-D0EC-4786-8B69-E491CE647FCC}
+	EndGlobalSection
+EndGlobal
